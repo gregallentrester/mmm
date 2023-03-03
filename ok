@@ -1,0 +1,22 @@
+#!/bin/bash -p
+
+clear
+
+
+if [ "$1" = "8" ];then
+
+  echo;echo;echo "1.8";echo;echo;
+
+  export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+
+elif [ "$1" = "11" ];then
+
+  echo;echo;echo "11";echo;echo
+
+  export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
+fi
+
+
+bld
+echo;echo $JAVA_HOME;echo;echo
+run $1
